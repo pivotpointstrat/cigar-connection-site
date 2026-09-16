@@ -1,75 +1,90 @@
-# Cigar Connection — Content & Photo Request
+# Cigar Connection — outstanding details
 
-**For:** the Cigar Connection team
-**From:** Pivot Point Strategy
-**Why:** We're building Cigar Connection its own website, separate from Paparazzi Bar & Kitchen. We already have your story — the walk-in humidor, the Dominican and Caribbean selection, the private upper level. What we don't have is **photography of the lounge itself**, and for a cigar lounge the photos *are* the sale. Warm light, cedar, leather, a cigar in hand — that's what makes someone decide to come up.
+**Status:** site built and LIVE at **cigarconnectionpp.com**
+**Photos:** received (11 images) — humidor, lounge, gallery, offers, cigars. No more needed.
+**Logo:** working version built from the promo artwork. Fine at header size; an original
+file would be better.
+**What's left:** the facts below. The site's HTML carries them as `<!-- TBC: ... -->`
+comments, so nothing unconfirmed is shown to a visitor.
 
-Everything below can be shot on a phone. Send them over WhatsApp or drop them in a Google Drive folder and share the link — we'll handle the rest.
+**Note on the offers:** the visible copy is deliberately month-proof — it reads
+"Daily · 12pm–4pm" for the house cigar and "This month's Cigar & Dine exclusive" for
+the food offer. So nothing goes stale on 1 October. But "**Daily**" is a strong claim
+and it came from a poster that said *"TODAY"* — so that is the first thing to verify.
+There are only **4 TBC comments** left in the HTML: the brand list (index + cigars),
+private-hire seated capacity, and whether there's a separate entrance.
 
 ---
 
-## 1. Photos we need (the priority)
+## The forwardable message
 
-Please shoot in landscape, and take a few of each so we can pick the best one. Natural light and warm interior light both work well; avoid the harsh white camera flash.
+Copy the block below and send it as-is (WhatsApp, Telegram or Facebook).
 
-**The humidor — most important**
-- [ ] The humidor open, showing the shelves of cigars
-- [ ] A close-up of cigars in the humidor (labels visible is fine)
-- [ ] You or a staff member selecting a cigar from the humidor
+---
 
-**The lounge itself**
-- [ ] The room empty, showing the seating and the layout
-- [ ] The seating area with the low lighting on — this sets the whole mood
-- [ ] The bar / drinks area upstairs
-- [ ] The window or balcony view over the river, if there is one
-- [ ] A table set for two, ideally with an ashtray and a drink
+**Cigar Connection website — a few details we need**
+
+Your site is built and live at **cigarconnectionpp.com** — we used the photos you sent,
+and they came out beautifully. The humidor shot is doing a lot of work.
+
+Before we call it finished there are a few facts to confirm. Most are already filled in
+with our best guess — **if it's right, just say "yes" and we'll move on.**
+
+**Most urgent — the offers**
+
+1. We've listed two offers from your posters: the **$9.99 house cigar** with a free
+   drink, and **50% off the food menu** with any cigar. The posters say *"September"*
+   and *"today"* — **do these run every day, or were they a one-off September promotion?**
+2. What times do they run? We've written Mon–Sat, 12–4pm.
+
+**Hours and getting in**
+
+3. **Opening hours** — we've used Paparazzi's: Mon–Sat 11am–11pm, closed Sunday.
+   Same upstairs, or different?
+4. **Phone** — we've used 031 777 2840. Does the lounge have its own number?
+5. **Entrance** — guests come in through Paparazzi and up the stairs? Is there a separate door?
 
 **The cigars**
-- [ ] Three or four cigars laid out together (band/labels showing)
-- [ ] A single cigar, close up, in good light
-- [ ] A cigar with a glass of whisky or rum — the classic pairing shot
 
-**People and evening atmosphere**
-- [ ] Guests enjoying a cigar and a drink (ask permission first — faces don't need to be recognisable)
-- [ ] An evening shot of the lounge in use, if you have one
+6. From the humidor photos we listed: **Cohiba, Romeo y Julieta, Joya, Perdomo,
+   VegaFina, White Label, AVO**. Correct? Anything missing you'd want shown?
+7. Do you sell cigars to take away, or is it lounge-only?
 
-**The building and entrance**
-- [ ] The street front of Paparazzi showing where guests come in
-- [ ] The stairs or the way up to the lounge
-- [ ] Any signage for Cigar Connection
+**Private hire**
 
-**Brand**
-- [ ] Do you have a **Cigar Connection logo**? If yes, send the highest-quality version you have (a PNG from whoever designed it is ideal). If not, tell us — we'll design one.
+8. How many people can you seat privately, and how much notice do you need?
+9. Do guests need to book, or can they walk in?
 
----
+**Two things to send us**
 
-## 2. Details we need confirmed
-
-- [ ] **Opening hours** — the same as Paparazzi (Mon–Sat, 11am–11pm), or different?
-- [ ] **Phone number** — do you have your own, or should we use Paparazzi's 031 777 2840?
-- [ ] **Address** — is it 179 E0 Preah Sisowath Quay, the same as Paparazzi? Is there a floor or unit number for the lounge?
-- [ ] **Entrance** — do guests come up through Paparazzi, or is there a separate door?
-- [ ] **Social pages** — Facebook only? Instagram? Telegram? We'll only list the ones you actually use, so please send the exact links.
-
-## 3. About the cigars
-
-- [ ] **Which brands/ranges** do you carry? A list is fine — no need to be formal.
-- [ ] **Price range** — a typical "from… to" for a single cigar
-- [ ] **Anything you're especially proud of** — a rare line, a house favourite, a new arrival
-- [ ] Do you sell cigars to take away, or is it lounge-only?
-- [ ] Do you offer **whisky, rum or cognac pairings**?
-
-## 4. How the lounge works (helps us write the site)
-
-- [ ] Do people need to **book**, or can they walk in?
-- [ ] Can the lounge be **booked for private groups**? How many people, and how much notice?
-- [ ] Is there a **dress code** or a **minimum spend**?
-- [ ] Do you serve food from Paparazzi upstairs, or a smaller menu?
+10. **The original logo file.** We rebuilt a working version from your promo artwork —
+    it's crisp at the size it's used, but soft if enlarged. A PNG from whoever designed
+    it would be ideal.
+11. **Any social pages we should list.** We have Facebook (CigarConnectionKH) and
+    Telegram (@cigarconnectionphnompenh). Instagram?
 
 ---
 
-## What happens with these
+Answer whatever you know — partial is fine, we'll mark the rest as pending.
 
-Once the photos and details land, we finish the site and have it live within a couple of days. Until then we're building the structure — so nothing is waiting on us.
+---
 
-**Anything you're unsure about, just send what you have and mark the rest "TBC". Partial answers are better than waiting.**
+## Where each answer goes
+
+| # | Question | File |
+|---|----------|------|
+| 1–2 | Offers (recurring?) | `index.html` — the two offer panels |
+| 3 | Lounge hours | `visit.html`, `index.html` |
+| 4 | Phone | `visit.html`, footers, JSON-LD |
+| 5 | Entrance | `visit.html`, `index.html` |
+| 6 | Brands | `cigars.html`, `index.html` |
+| 7 | Take-away sales | `cigars.html` |
+| 8–9 | Private hire / booking | `private-hire.html`, `visit.html` |
+| 10 | Logo → replaces `images/logo-light.png`, `logo-dark.png`, favicon |
+| 11 | Socials | footers, `visit.html`, JSON-LD `sameAs` |
+
+## Still to do our side (not waiting on the client)
+
+- **Netlify form notification** — Site configuration → Forms → Form notifications →
+  Email, or enquiries sit in the dashboard unseen.
+- Google Business Profile should be kept as current as the website.
