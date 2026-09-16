@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>document.documentElement.className += ' js';</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Visit | Cigar Connection — Hours, Address &amp; How to Find Us, Phnom Penh</title>
   <meta name="description" content="Find Cigar Connection: the cigar lounge upstairs at Paparazzi, 179 E0 Preah Sisowath Quay, Riverside, Phnom Penh. Opening hours, phone number and how to get upstairs." />
@@ -27,19 +28,23 @@
         <img src="images/logo-light.png" alt="" class="brand-logo" />
         <span class="brand-text">Cigar Connection<span>Riverside · Phnom Penh</span></span>
       </a>
-      <nav class="nav" aria-label="Main">
+      <nav class="nav" id="main-nav" aria-label="Main">
         <a href="">Home</a>
         <a href="the-lounge.html">The Lounge</a>
         <a href="cigars.html">Cigars</a>
         <a href="private-hire.html">Private Hire</a>
         <a href="visit.html" aria-current="page">Visit</a>
       </nav>
+        <button class="nav-toggle" type="button" aria-label="Menu"
+                aria-expanded="false" aria-controls="main-nav">
+          <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
-      <img src="images/street-front.jpg" alt="The Paparazzi Bar &amp; Kitchen frontage on Preah Sisowath Quay at night — guests enter here and take the stairs to Cigar Connection" class="photo photo-hero" />
+      <img src="images/street-front.jpg" alt="The Paparazzi Bar &amp; Kitchen frontage on Preah Sisowath Quay at night — guests enter here and take the stairs to Cigar Connection" class="photo photo-hero" / decoding="async" fetchpriority="high">
       <div class="wrap">
         <p class="kicker">Visit</p>
         <h1>Up the stairs, on the <span class="brass">Riverside</span></h1>
@@ -91,7 +96,7 @@
     <section class="section-alt">
       <div class="wrap feature flip">
         <div class="feature-media">
-          <img src="images/hero-lounge.jpg" alt="The Cigar Connection logo painted on the lounge wall above leather armchairs" class="photo photo-wide" />
+          <img src="images/hero-lounge.jpg" alt="The Cigar Connection logo painted on the lounge wall above leather armchairs" class="photo photo-wide" / loading="lazy" decoding="async">
         </div>
         <div>
           <p class="kicker">Finding us</p>
@@ -183,5 +188,6 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="nav.js" defer></script>
 </body>
 </html>

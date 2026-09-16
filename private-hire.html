@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>document.documentElement.className += ' js';</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Private Hire | Cigar Connection — Book the Lounge, Phnom Penh</title>
   <meta name="description" content="Book the Cigar Connection lounge for a private group. The upper level can be reserved for birthdays, celebrations and private gatherings — upstairs at Paparazzi, Riverside, Phnom Penh." />
@@ -27,19 +28,23 @@
         <img src="images/logo-light.png" alt="" class="brand-logo" />
         <span class="brand-text">Cigar Connection<span>Riverside · Phnom Penh</span></span>
       </a>
-      <nav class="nav" aria-label="Main">
+      <nav class="nav" id="main-nav" aria-label="Main">
         <a href="">Home</a>
         <a href="the-lounge.html">The Lounge</a>
         <a href="cigars.html">Cigars</a>
         <a href="private-hire.html" aria-current="page">Private Hire</a>
         <a href="visit.html">Visit</a>
       </nav>
+        <button class="nav-toggle" type="button" aria-label="Menu"
+                aria-expanded="false" aria-controls="main-nav">
+          <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
-      <img src="images/lounge-group.jpg" alt="Guests seated in leather armchairs around a table in the Cigar Connection lounge" class="photo photo-hero" />
+      <img src="images/lounge-group.jpg" alt="Guests seated in leather armchairs around a table in the Cigar Connection lounge" class="photo photo-hero" / decoding="async" fetchpriority="high">
       <div class="wrap">
         <p class="kicker">Private hire</p>
         <h1>Take the whole <span class="brass">room</span></h1>
@@ -58,7 +63,7 @@
     <section>
       <div class="wrap feature">
         <div class="feature-media">
-          <img src="images/lounge-full.jpg" alt="The lounge set up for an evening, with guests at the tables and the humidor lit at the back" class="photo photo-wide" />
+          <img src="images/lounge-full.jpg" alt="The lounge set up for an evening, with guests at the tables and the humidor lit at the back" class="photo photo-wide" / loading="lazy" decoding="async">
         </div>
         <div>
           <p class="kicker">What you get</p>
@@ -217,5 +222,6 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="nav.js" defer></script>
 </body>
 </html>

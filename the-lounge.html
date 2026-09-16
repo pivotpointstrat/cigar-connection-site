@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>document.documentElement.className += ' js';</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Lounge | Cigar Connection — Upstairs at Paparazzi, Phnom Penh</title>
   <meta name="description" content="Inside the Cigar Connection lounge: exposed brick, walnut panelling, leather armchairs, framed cigar art, a lit bar, and the walk-in humidor at the back of the room." />
@@ -27,19 +28,23 @@
         <img src="images/logo-light.png" alt="" class="brand-logo" />
         <span class="brand-text">Cigar Connection<span>Riverside · Phnom Penh</span></span>
       </a>
-      <nav class="nav" aria-label="Main">
+      <nav class="nav" id="main-nav" aria-label="Main">
         <a href="">Home</a>
         <a href="the-lounge.html" aria-current="page">The Lounge</a>
         <a href="cigars.html">Cigars</a>
         <a href="private-hire.html">Private Hire</a>
         <a href="visit.html">Visit</a>
       </nav>
+        <button class="nav-toggle" type="button" aria-label="Menu"
+                aria-expanded="false" aria-controls="main-nav">
+          <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
-      <img src="images/room-wide.jpg" alt="The brick wall of the Cigar Connection lounge, hung with framed vintage cigar artwork and portraits" class="photo photo-hero" />
+      <img src="images/room-wide.jpg" alt="The brick wall of the Cigar Connection lounge, hung with framed vintage cigar artwork and portraits" class="photo photo-hero" / decoding="async" fetchpriority="high">
       <div class="wrap">
         <p class="kicker">The lounge</p>
         <h1>A room with the <span class="brass">light turned down</span></h1>
@@ -53,7 +58,7 @@
     <section>
       <div class="wrap feature">
         <div class="feature-media">
-          <img src="images/lounge-full.jpg" alt="Guests smoking cigars in leather armchairs in the lounge, with the lit walk-in humidor visible at the back" class="photo photo-wide" />
+          <img src="images/lounge-full.jpg" alt="Guests smoking cigars in leather armchairs in the lounge, with the lit walk-in humidor visible at the back" class="photo photo-wide" / loading="lazy" decoding="async">
         </div>
         <div>
           <p class="kicker">The atmosphere</p>
@@ -113,10 +118,10 @@
           <hr class="rule" />
         </div>
         <div class="gallery">
-          <img src="images/hero-lounge.jpg" alt="The compass Cigar Connection logo painted on the wall above brown leather armchairs" class="photo" />
-          <img src="images/lounge-group.jpg" alt="Guests in leather armchairs around a table beneath the framed Cigar Connection artwork" class="photo" />
-          <img src="images/pairing-guinness.jpg" alt="A cigar and a pint of Guinness on a wooden table" class="photo" />
-          <img src="images/cigars-pair.jpg" alt="Two cigars crossed on a Cohiba ashtray" class="photo" />
+          <img src="images/hero-lounge.jpg" alt="The compass Cigar Connection logo painted on the wall above brown leather armchairs" class="photo" / loading="lazy" decoding="async">
+          <img src="images/lounge-group.jpg" alt="Guests in leather armchairs around a table beneath the framed Cigar Connection artwork" class="photo" / loading="lazy" decoding="async">
+          <img src="images/pairing-guinness.jpg" alt="A cigar and a pint of Guinness on a wooden table" class="photo" / loading="lazy" decoding="async">
+          <img src="images/cigars-pair.jpg" alt="Two cigars crossed on a Cohiba ashtray" class="photo" / loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -161,5 +166,6 @@
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="nav.js" defer></script>
 </body>
 </html>

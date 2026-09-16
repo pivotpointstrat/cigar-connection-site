@@ -423,3 +423,103 @@ textarea { min-height: 120px; resize: vertical; }
 .enquiry .honeypot { position: absolute; left: -9999px; }  /* bot trap */
 .enquiry-note { font-size: 0.84rem; opacity: 0.8; margin-top: 12px; }
 .form-fallback { display: none; }
+
+
+/* ===========================================================================
+   MOBILE
+   The header used to just shrink its five nav links (16px gaps, 0.8rem text),
+   which needs roughly 590px of width — so it overflowed every phone. Below
+   860px the links now collapse behind a hamburger button.
+
+   The collapse is scoped to `html.js`, a class set inline in each page's
+   <head>. If nav.js fails to load, the class is never added, the links stay
+   in the layout, and the site is still navigable — it degrades to the old
+   cramped bar rather than losing its menu entirely.
+   =========================================================================== */
+:root { --header-h: 70px; }
+html {
+  scroll-padding-top: calc(var(--header-h) + 16px);  /* anchors clear the sticky header */
+  -webkit-text-size-adjust: 100%;                    /* no landscape text inflation */
+}
+img, iframe, video { max-width: 100%; }
+img { height: auto; }
+
+.nav-toggle { display: none; }   /* desktop keeps the plain link bar */
+
+@media (max-width: 860px) {
+  /* the header is still 70px tall down to 700px (logo is 74px wide until then),
+     then 62px — matching the existing .site-header .wrap rules further up */
+  :root { --header-h: 70px; }
+
+  /* ---- the hamburger button ---- */
+  .nav-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 46px; height: 46px; margin-left: auto; padding: 0;
+    background: transparent; border: 1px solid var(--line); border-radius: 6px;
+    color: var(--brass-soft); cursor: pointer; flex: none;
+  }
+  .nav-toggle:hover { border-color: var(--brass); color: var(--brass); }
+  .nav-toggle-bars { position: relative; display: block; width: 20px; height: 14px; }
+  .nav-toggle-bars i {
+    position: absolute; left: 0; width: 100%; height: 2px;
+    background: currentColor; border-radius: 2px;
+    transition: transform .2s ease, opacity .15s ease;
+  }
+  .nav-toggle-bars i:nth-child(1) { top: 0; }
+  .nav-toggle-bars i:nth-child(2) { top: 6px; }
+  .nav-toggle-bars i:nth-child(3) { top: 12px; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars i:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars i:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars i:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  /* ---- the panel ---- */
+  html.js .nav {
+    position: fixed; left: 0; right: 0; top: var(--header-h);
+    flex-direction: column; align-items: stretch; gap: 0;
+    padding: 6px 0 10px;
+    max-height: calc(100vh - var(--header-h));
+    max-height: calc(100dvh - var(--header-h));
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+    background: rgba(10, 9, 8, 0.985);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+    opacity: 0; transform: translateY(-10px); pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+  }
+  html.js .nav.is-open { opacity: 1; transform: none; pointer-events: auto; }
+  html.js .nav a {
+    padding: 15px 24px; font-size: 1rem; letter-spacing: 0.04em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  }
+  html.js .nav a:last-child { border-bottom: 0; }
+  html.js .nav a[aria-current="page"] { background: rgba(201, 162, 74, 0.07); }
+
+  /* the page behind the open panel must not scroll */
+  body.nav-open { overflow: hidden; }
+
+  /* ---- roomier tap targets (Apple/Google both say ~44-48px) ---- */
+  .wrap { padding: 0 20px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 48px; padding: 15px 28px;
+  }
+  .socials a { min-height: 46px; padding: 13px 22px; }
+  .footer-grid a { display: inline-block; padding: 10px 0; }
+
+  /* iOS zooms the page when a focused field is smaller than 16px */
+  .enquiry input, .enquiry textarea { font-size: 16px; }
+
+  /* give the embedded map a usable height instead of the desktop one */
+  iframe[src*="openstreetmap"] { height: 300px; }
+}
+
+@media (max-width: 420px) {
+  .brand-logo { width: 46px; }
+  .brand-text { font-size: 0.94rem; }
+  .brand-text span { font-size: 0.5rem; letter-spacing: 0.16em; }
+}
+
+@media (max-width: 700px) {
+  :root { --header-h: 62px; }
+}

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>document.documentElement.className += ' js';</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Not found | Cigar Connection</title>
   <meta name="robots" content="noindex" />
@@ -11,7 +12,7 @@
 <body>
   <main id="main" style="min-height:60vh;display:grid;place-items:center;text-align:center;padding:48px 20px;">
     <div>
-      <img src="images/logo-light.png" alt="" width="120" style="margin:0 auto 18px;" />
+      <img src="images/logo-light.png" alt="" width="120" style="margin:0 auto 18px;" / loading="lazy" decoding="async">
       <p class="eyebrow">Page not found</p>
       <h1 style="margin:6px 0 10px;">That page isn&rsquo;t on the shelf</h1>
       <p class="lede" style="max-width:34rem;margin:0 auto 22px;">
@@ -23,5 +24,6 @@
       </p>
     </div>
   </main>
+  <script src="nav.js" defer></script>
 </body>
 </html>
