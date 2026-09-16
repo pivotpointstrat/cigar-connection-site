@@ -1,0 +1,28 @@
+# Cigar Connection — static site. Plain HTML/CSS, no framework, no build step.
+#
+# This file exists so connecting the repo to Netlify is ONE click: Netlify reads
+# `publish` here and skips its "build command / publish directory" questions.
+# (If it still asks: build command EMPTY, publish directory "." — a dot.)
+
+[build]
+  publish = "."
+  command = ""
+
+# Netlify serves the site's own 404.html automatically — no redirect needed.
+
+# Images never change under the same filename, so cache them hard.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Pages should always be revalidated, so edits show up immediately.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# The enquiry form on private-hire.html is handled by Netlify Forms.
+# Submissions appear under Site → Forms. Add an email notification there
+# (Site configuration → Forms → Form notifications) or they'll only be visible
+# in the Netlify dashboard.

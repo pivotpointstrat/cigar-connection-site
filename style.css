@@ -399,3 +399,27 @@ textarea { min-height: 120px; resize: vertical; }
 .socials a:hover { border-color: var(--brass); background: rgba(201, 162, 74, 0.08); }
 .socials svg { width: 17px; height: 17px; fill: currentColor; flex: none; }
 
+
+
+/* ---------------------------------------------------------------------------
+   Enquiry form (Netlify Forms — no backend, no database, no API key)
+   --------------------------------------------------------------------------- */
+.enquiry { display: grid; gap: 14px; max-width: 640px; margin-top: 26px; }
+.enquiry .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 620px) { .enquiry .row { grid-template-columns: 1fr; } }
+.enquiry label {
+  display: block; font-size: 0.72rem; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--brass-soft); margin-bottom: 6px;
+}
+.enquiry input, .enquiry textarea {
+  width: 100%; padding: 12px 14px; background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line); border-radius: 4px; color: var(--cream);
+  font: inherit; font-size: 0.95rem;
+}
+.enquiry input:focus, .enquiry textarea:focus {
+  outline: 2px solid var(--brass); outline-offset: 1px; border-color: var(--brass);
+}
+.enquiry textarea { min-height: 120px; resize: vertical; }
+.enquiry .honeypot { position: absolute; left: -9999px; }  /* bot trap */
+.enquiry-note { font-size: 0.84rem; opacity: 0.8; margin-top: 12px; }
+.form-fallback { display: none; }
