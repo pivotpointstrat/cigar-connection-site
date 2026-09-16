@@ -1,0 +1,401 @@
+/* ==========================================================================
+   Cigar Connection — Riverside, Phnom Penh
+   Design system: "The Humidor" — cedar, brass, low amber light.
+
+   Deliberately the OPPOSITE of the Paparazzi site. Paparazzi is bright
+   flashbulb glamour (champagne gold on charcoal). The lounge is its inverse:
+   warm near-black, cedar browns, a brass hairline, and one low amber glow.
+   A lounge site that looked like the restaurant would read as a page, not
+   a place.
+   ========================================================================== */
+
+:root {
+  /* Warm blacks — never pure #000, which reads cheap on a moody site */
+  --ink: #0a0908;
+  --charcoal: #14120f;
+  --panel: #1c1916;
+  --panel-2: #23201c;
+
+  /* Cedar / tobacco, straight from a humidor interior */
+  --cedar: #4a2f1d;
+  --tobacco: #2a1d13;
+
+  /* Taken from the photos of the room itself — the brick and the walnut panelling */
+  --brick: #7a4a35;
+  --walnut: #3f2a1c;
+
+  /* Brass. Fittings, banding, the humidor's hardware, the torch lighters. */
+  --brass: #c9a24a;
+  --brass-soft: #e0c47f;
+
+  /* Parchment — the client's own promo artwork uses a cream field with dark
+     brown line art. Reused for the offers so the site matches their posters. */
+  --parchment: #efe4cf;
+  --parchment-ink: #33241a;
+
+  /* Light: the single accent. Used sparingly — it's a glow, not a colour. */
+  --ember: #d9822b;
+
+  --cream: #f4efe6;
+  --muted: #a89f93;
+  --line: rgba(201, 162, 74, 0.22);
+
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --wrap: 1120px;
+  --radius: 4px; /* shallow — a lounge is panelled, not bubbly */
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--brass); text-decoration: none; }
+a:hover { color: var(--brass-soft); }
+
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Type ---------- */
+
+h1, h2, h3, .display {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  letter-spacing: 0.01em;
+}
+
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); }
+h3 { font-size: 1.35rem; }
+
+p { margin: 0 0 18px; color: var(--muted); }
+
+.lede { font-size: 1.1rem; max-width: 62ch; color: #c9c1b6; }
+
+/* The eyebrow. Brass, tiny, wide-tracked — the loudest quiet element. */
+.kicker {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin: 0 0 14px;
+}
+
+.brass { color: var(--brass); }
+
+/* The repeating motif: a brass hairline that fades out. Used under every
+   section heading and as a divider. Cheap, and it ties the pages together. */
+.rule {
+  height: 1px;
+  border: 0;
+  margin: 0 0 28px;
+  background: linear-gradient(90deg, var(--brass) 0%, rgba(201, 162, 74, 0.05) 60%, transparent 100%);
+  max-width: 180px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 9, 8, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 70px;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.brand span { display: block; font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass); }
+
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a {
+  font-size: 0.86rem;
+  color: #cfc7bc;
+  letter-spacing: 0.03em;
+}
+.nav a:hover, .nav a[aria-current="page"] { color: var(--brass); }
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: var(--radius);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--brass);
+  background: var(--brass);
+  color: #17130c; /* dark text on brass — white fails contrast here */
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn:hover { background: var(--brass-soft); border-color: var(--brass-soft); color: #17130c; }
+
+.btn-ghost { background: transparent; color: var(--brass); }
+.btn-ghost:hover { background: rgba(201, 162, 74, 0.1); color: var(--brass-soft); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  padding: clamp(80px, 14vw, 160px) 0 clamp(70px, 12vw, 130px);
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+/* The photograph sits under a warm gradient so the copy always reads. */
+.hero-bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.42;
+  filter: saturate(0.85);
+}
+
+.hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 55% at 22% 40%, rgba(217, 130, 43, 0.18) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(10, 9, 8, 0.72) 0%, rgba(10, 9, 8, 0.94) 78%);
+  pointer-events: none;
+}
+
+.hero .wrap { position: relative; z-index: 2; }
+.hero h1 { max-width: 17ch; }
+.hero .lede { margin-top: 8px; }
+
+/* ---------- Sections ---------- */
+
+section { padding: clamp(56px, 9vw, 104px) 0; }
+.section-alt { background: var(--charcoal); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.section-head { max-width: 62ch; margin-bottom: 46px; }
+
+/* ---------- Cards ---------- */
+
+.grid { display: grid; gap: 26px; }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover { border-color: rgba(201, 162, 74, 0.45); transform: translateY(-2px); }
+.card h3 { margin-bottom: 10px; }
+.card p:last-child { margin-bottom: 0; }
+
+.card-photo { padding: 0; overflow: hidden; }
+.card-photo img { width: 100%; height: 210px; object-fit: cover; }
+.card-photo .card-body { padding: 24px 26px 28px; }
+
+/* ---------- Split (photo + copy) ---------- */
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+.split img { border-radius: var(--radius); width: 100%; height: 100%; max-height: 460px; object-fit: cover; }
+
+@media (max-width: 760px) {
+  .split { grid-template-columns: 1fr; gap: 30px; }
+}
+
+/* ---------- Placeholder (until the client's photos arrive) ---------- */
+
+.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 210px;
+  border: 1px dashed rgba(201, 162, 74, 0.35);
+  border-radius: var(--radius);
+  background: repeating-linear-gradient(45deg, rgba(201,162,74,0.03) 0 12px, transparent 12px 24px);
+  color: rgba(201, 162, 74, 0.6);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- Facts strip ---------- */
+
+.facts { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.fact-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); margin-bottom: 6px; }
+.fact-value { font-family: var(--serif); font-size: 1.25rem; color: var(--cream); }
+
+/* ---------- Form ---------- */
+
+.form-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); }
+
+input, select, textarea {
+  width: 100%;
+  padding: 13px 14px;
+  background: var(--panel-2);
+  border: 1px solid rgba(201, 162, 74, 0.2);
+  border-radius: var(--radius);
+  color: var(--cream);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--brass);
+  outline-offset: 1px;
+  border-color: var(--brass);
+}
+textarea { min-height: 120px; resize: vertical; }
+
+.form-status { margin-top: 16px; font-size: 0.9rem; }
+.form-status.ok { color: #8fc98f; }
+.form-status.err { color: #e79a9a; }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--charcoal);
+  border-top: 1px solid var(--line);
+  padding: 60px 0 40px;
+  font-size: 0.92rem;
+}
+.footer-grid { display: grid; gap: 36px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.footer-grid h3 { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); font-family: var(--sans); font-weight: 600; margin-bottom: 14px; }
+.footer-grid a { display: block; color: var(--muted); margin-bottom: 8px; }
+.footer-grid a:hover { color: var(--brass-soft); }
+.footer-legal { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line); color: #7d766c; font-size: 0.82rem; }
+
+/* ---------- Accessibility ---------- */
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--brass); color: #17130c;
+  padding: 12px 18px; font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+@media (max-width: 700px) {
+  .nav { gap: 16px; }
+  .nav a { font-size: 0.8rem; }
+  .site-header .wrap { min-height: 62px; }
+}
+
+/* ==========================================================================
+   Components added once the client's own photography arrived
+   ========================================================================== */
+
+/* Header logo — the compass mark above the name */
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-logo { width: 74px; height: auto; flex: none; }
+.brand-text { font-family: var(--serif); font-size: 1.22rem; line-height: 1.1; color: var(--cream); }
+.brand-text span { display: block; font-family: var(--sans); font-size: 0.56rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); margin-top: 3px; }
+
+@media (max-width: 700px) {
+  .brand-logo { width: 56px; }
+  .brand-text { font-size: 1rem; }
+}
+
+/* Photographs. Every image is a real photo of the room. */
+.photo {
+  width: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+.photo-hero { position: absolute; inset: 0; height: 100%; border: 0; border-radius: 0; opacity: 0.5; }
+.photo-tall { aspect-ratio: 4 / 5; }
+.photo-wide { aspect-ratio: 3 / 2; }
+.photo-square { aspect-ratio: 1 / 1; }
+
+/* Gallery grid */
+.gallery { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.gallery .photo { height: 100%; aspect-ratio: 4 / 3; }
+.gallery-tall { grid-row: span 2; }
+.gallery-tall .photo { aspect-ratio: auto; height: 100%; }
+
+/* Offer panels — styled to echo the client's own parchment posters */
+.offer {
+  background: var(--parchment);
+  color: var(--parchment-ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(201, 162, 74, 0.5);
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+.offer img { width: 100%; height: 100%; object-fit: cover; }
+.offer-body { padding: 30px 30px 34px; }
+.offer-body h3 { color: var(--parchment-ink); font-size: 1.7rem; margin-bottom: 6px; }
+.offer-body .offer-price { font-family: var(--serif); font-size: 2.6rem; color: #7a2f1d; line-height: 1; margin: 6px 0 12px; }
+.offer-body p { color: #5b4634; }
+.offer-body .offer-when {
+  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #7a2f1d; font-weight: 600; margin-bottom: 4px;
+}
+.offer-body .offer-fine { font-size: 0.76rem; color: #7b6653; margin-top: 14px; margin-bottom: 0; }
+
+@media (max-width: 720px) { .offer { grid-template-columns: 1fr; } }
+
+/* Brand chips — the houses actually seen on the humidor shelves */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+.chips li {
+  font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 7px 14px; border: 1px solid var(--line); border-radius: 100px;
+  color: var(--brass-soft); background: rgba(201, 162, 74, 0.05);
+}
+
+/* Feature row: photo beside copy */
+.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; }
+.feature.flip .feature-media { order: 2; }
+@media (max-width: 760px) { .feature, .feature.flip .feature-media { grid-template-columns: 1fr; order: 0; gap: 26px; } }
+
+/* Social buttons */
+.socials { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.socials a {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 11px 20px; border: 1px solid var(--line); border-radius: 100px;
+  font-size: 0.8rem; color: var(--brass-soft);
+}
+.socials a:hover { border-color: var(--brass); background: rgba(201, 162, 74, 0.08); }
+.socials svg { width: 17px; height: 17px; fill: currentColor; flex: none; }
+

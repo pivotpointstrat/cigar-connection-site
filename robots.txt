@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pivotpointstrat.github.io/cigar-connection-site/sitemap.xml
